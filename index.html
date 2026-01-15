@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Movie Explorer</title>
+
+  <body 
+  class="min-h-screen bg-fixed bg-center bg-cover"
+  style="background-image: url('https://images.unsplash.com/photo-1489599849927-2ee91cede3ba');"
+>
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 min-h-screen">
+
+  <!-- Header -->
+  <header class="bg-indigo-600 text-white p-4 text-center text-2xl font-bold">
+    🎬 Movie Explorer
+  </header>
+
+  <!-- Search Section -->
+  <section class="p-4 flex flex-col sm:flex-row gap-4 justify-center">
+    <input
+      id="searchInput"
+      type="text"
+      placeholder="Search movie by title..."
+      class="p-2 w-full sm:w-80 border rounded"
+    />
+
+    <button
+      id="searchBtn"
+      class="bg-indigo-600 text-white px-4 py-2 rounded hover:bg-indigo-700"
+    >
+      Search
+    </button>
+
+    <select
+      id="sortSelect"
+      class="p-2 border rounded"
+    >
+      <option value="">Sort By</option>
+      <option value="year">Year</option>
+      <option value="rating">IMDb Rating</option>
+    </select>
+  </section>
+
+  <!-- Message -->
+  <p id="message" class="text-center text-red-500 font-semibold"></p>
+
+  <!-- Movie Cards -->
+  <section
+    id="movieContainer"
+    class="p-4 grid gap-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4"
+  ></section>
+
+  <script src="script.js"></script>
+</body>
+</html>
